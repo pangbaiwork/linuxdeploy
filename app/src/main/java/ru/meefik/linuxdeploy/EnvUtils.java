@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EnvUtils {
+    public static String str="命令";
 
     /**
      * Extract file to env directory
@@ -211,10 +212,12 @@ public class EnvUtils {
                 if (PrefStore.isTraceMode(c))
                     params.add(0, "set -x");
                 params.add("exit $?");
-
+               
                 for (String cmd : params) {
+                    str=str+cmd+"\n";
                     os.writeBytes(cmd + "\n");
                 }
+                
                 os.flush();
 
                 (new Thread() {
