@@ -24,3 +24,12 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
+    - name: find apk
+      run:  find ./ -regex ".*\.apk\|.*\.aar"
+           
+       
+    - name: Upload APK
+      uses: actions/upload-artifact@v2
+      with:
+          name:  ok
+          path: app/build/outputs/apk/debug/*.apk
