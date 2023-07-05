@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity implements
                 containerStart(null);
                 break;
             case R.id.menu_stop:
-                android.widget.Toast.makeText(MainActivity.this,ru.meefik.linuxdeploy.EnvUtils.str,Toast.LENGTH_LONG);
+                android.widget.Toast.makeText(MainActivity.this,ru.meefik.linuxdeploy.EnvUtils.str,Toast.LENGTH_LONG).show();
                 containerStop(null);
                 break;
             case R.id.menu_properties:
@@ -196,7 +196,7 @@ public class MainActivity extends AppCompatActivity implements
                 containerConfigure();
                 break;
             case R.id.menu_export:
-                android.widget.Toast.makeText(MainActivity.this,ru.meefik.linuxdeploy.EnvUtils.str,Toast.LENGTH_LONG);
+                android.widget.Toast.makeText(MainActivity.this,ru.meefik.linuxdeploy.EnvUtils.str,Toast.LENGTH_LONG).show();
                 containerExport();
                 break;
             case R.id.menu_status:
