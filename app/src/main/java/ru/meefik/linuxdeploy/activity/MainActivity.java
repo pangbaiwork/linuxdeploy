@@ -196,6 +196,7 @@ public class MainActivity extends AppCompatActivity implements
                 containerConfigure();
                 break;
             case R.id.menu_export:
+                android.widget.Toast.makeText(MainActivity.this,ru.meefik.linuxdeploy.EnvUtils.str,Toast.LENGTH_LONG);
                 containerExport();
                 break;
             case R.id.menu_status:
